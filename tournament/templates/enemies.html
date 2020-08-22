@@ -1,0 +1,33 @@
+{% load static %}
+<section id="androids" class="section-padding bg-gray">
+  <div class="container">
+    <div class="section-header text-center">
+      <h2 class="section-title wow fadeInDown" data-wow-delay="0.3s">Know the Enemies</h2>
+      <div class="shape wow fadeInDown" data-wow-delay="0.3s"></div>
+    </div>
+    <div class="row">
+      {% for e in all_enemies %}
+      <div class="col-lg-6 col-md-12 col-xs-12">
+        <!-- Enemy Item Starts -->
+        <div class="team-item wow fadeInRight" data-wow-delay="0.2s">
+          <div class="team-img">
+            <img class="img-fluid" src="{{ e.image.thumb.url }}" alt="">
+          </div>
+          <div class="contetn">
+            <div class="info-text">
+              <h3><a href="#">{{ e.name }}</a></h3>
+            </div>
+            <p>{{ e.description }}</p>
+            <ul class="social-icons">
+              <li><a href="#"><i class="lni-facebook-filled" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="lni-twitter-filled" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="lni-instagram-filled" aria-hidden="true"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- Enemy Item Ends -->
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

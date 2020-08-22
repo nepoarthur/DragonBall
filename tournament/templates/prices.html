@@ -1,0 +1,32 @@
+{% load static %}
+<section id="pricing" class="section-padding">
+  <div class="container">
+    <div class="section-header text-center">
+      <h2 class="section-title wow fadeInDown" data-wow-delay="0.3s">Pricing</h2>
+      <div class="shape wow fadeInDown" data-wow-delay="0.3s"></div>
+    </div>
+    <div class="row">
+      {% for p in all_prices %}
+      <div class="col-lg-4 col-md-6 col-xs-12">
+        <div class="table wow fadeInLeft" data-wow-delay="1.2s">
+          <div class="icon-box">
+            <i class="{{ p.icon }}"></i>
+          </div>
+          <div class="pricing-header">
+            <p class="price-value">{{ p.price }}</p>
+          </div>
+          <div class="title">
+            <h3>{{ p.title }}</h3>
+          </div>
+          <ul class="description">
+            <li>{{ p.users }}</li>
+            <li>{{ p.storage }}</li>
+            <li>{{ p.support }}</li>
+          </ul>
+          <button class="btn btn-common">Buy Now</button>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

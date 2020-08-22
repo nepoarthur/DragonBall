@@ -1,0 +1,93 @@
+{% load static %}
+<header id="header-wrap">
+  <!-- Navbar Start -->
+  <nav class="navbar navbar-expand-md bg-inverse fixed-top scrolling-navbar">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <a href="{% url 'index' %}" class="navbar-brand"><img src="{% static 'img/dbzlogo.png' %}" width="40" height="40"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="lni-menu"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto w-100 justify-content-end clearfix">
+          <li class="nav-item active">
+            <a class="nav-link" href="#hero-area">
+              Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#androids">
+              Androids
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#tournament">
+              Tournament
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#heroes">
+              Z Warriors
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#features">
+              Features
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#pricing">
+              Pricing
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#testimonial">
+              Testimonial
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar End -->
+
+  <!-- Hero Area Start -->
+  <div id="hero-area" class="hero-area-bg">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
+          <div class="contents">
+            <h2 class="head-title"><br>Cell's Tournament!</h2>
+            <h5>Watch Sayians, Namekuseijins and Humans VS Androids in a battle for planetary survival!</h5>
+            <div class="header-button">
+              <a href="#contact" class="btn btn-common">Get it Now!</i></a>
+              <a href="#tournament" class="btn btn-border video-popup">Learn More</i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+          <div class="intro-img">
+            <img class="img-fluid" src="{% static 'img/intro-z.png' %}" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Hero Area End -->
+  <div class="container">
+    {% if messages %}
+      {% for m in messages %}
+        <div class="alert alert-{{ m.tags }}">
+          <button type="button" class="close" data-dismiss="alert"></button>
+          <strong>{{ m }}</strong>
+        </div>
+      {% endfor %}
+    {% endif %}
+  </div>
+
+</header>
